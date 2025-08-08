@@ -1,0 +1,38 @@
+
+   h1{
+    width: max-content;
+    background-color: lightgrey;
+    padding: 5px;
+    margin: 20px;
+    position: relative;
+    z-index: 0;
+    overflow:hidden;
+    transition: 0.8s;
+
+
+   }
+   h1::before{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+    position: absolute;
+    z-index: -1;
+    top:0;
+    right:-100%;
+    bottom:0;
+    left:-100%;
+    transform: scale(0);
+    border-radius: 50px;
+
+   }
+   h1:hover::before{
+    color: white;
+   transition: 0.8s;
+   transform: scale(1.5);
+   left: 0;
+   right: 0;
+   bottom: 0; 
+   top: 0;
+   }
+    
